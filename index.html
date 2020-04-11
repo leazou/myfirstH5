@@ -2,24 +2,56 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="shortcut icon" href="./assets/favicon.ico" />
 		<title>Hi~ o(*￣▽￣*)ブ</title>
 		<style type="text/css">
-			body{
+			body {
 				background-image: url('https://ae01.alicdn.com/kf/H6dabcd22d9674d52a8bd114790dea610N.png');
 			}
-			p{
+
+			#mask {
+				/* 				background-color: rgba(255, 255, 255, 0.3);
+							height: 100px; */
+				margin-left: 20px;
+			}
+
+
+			#mask img {
+				width: 100px;
+				height: 60px;
+				cursor: pointer;
+			}
+
+			p {
 				color: seagreen;
 			}
-			.audio{
+
+			.audio {
 				margin-top: 200px;
-				text-align: center;		
+				text-align: center;
 			}
 		</style>
 	</head>
 	<body>
+		<div id="mask">
+			  <img src="https://ae01.alicdn.com/kf/H6dabcd22d9674d52a8bd114790dea610N.png" alt="">
+			  <img src="https://ae01.alicdn.com/kf/H6ba0f402824749ddadfe6ce1323e43c47.jpg" alt="">
+			  <img src="https://ae01.alicdn.com/kf/H619e2eb48b0e49328938d73c4faf5d2b9.jpg" alt="">
+
+		</div>
 		<div class="audio">
-		  <p>~~随机音乐~~</p>
-		  <audio src="https://api.uomg.com/api/rand.music" controls autoplay></audio>
+			<p>~~随机音乐~~</p>
+			<audio src="https://api.uomg.com/api/rand.music" controls autoplay></audio>
 		</div>
 	</body>
 </html>
+<script>
+	//获取所有img标签
+	var imgObjs = document.getElementById("mask").children;
+	//遍历循环所有img对象
+	for (var i = 0; i < imgObjs.length; i++) {
+		imgObjs[i].onclick = function() {
+			document.body.style.backgroundImage = "url(" + this.src + ")";
+		}
+	}
+</script>
