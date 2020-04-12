@@ -6,7 +6,7 @@
 		<title>Hi~ o(*￣▽￣*)ブ</title>
 		<style type="text/css">
 			body {
-				background-image: url('https://ae01.alicdn.com/kf/H6dabcd22d9674d52a8bd114790dea610N.png');
+				background-image: url('https://ae01.alicdn.com/kf/H6dabcd22d9674d52a8bd114790dea610N.png') no-repeat;
 			}
 
 			#mask {
@@ -51,7 +51,7 @@
 	//遍历循环所有img对象
 	for (var i = 0; i < imgObjs.length; i++) {
 		imgObjs[i].onclick = function() {
-			document.body.style.backgroundImage = "url(" + this.src + ")no-repeat";
+			document.body.style.backgroundImage = "url(" + this.src + ") no-repeat";
 		}
 	}
 </script>
